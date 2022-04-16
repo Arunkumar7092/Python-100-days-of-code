@@ -1,6 +1,5 @@
 import os
 from art import logo
-print(logo)
 
 def add(num1 ,num2):
     return num1 + num2
@@ -38,6 +37,7 @@ def function_recurion():
         else:
             continue_calculation = False
             os.system('clear')
-continue_new_calculation = True
-while continue_new_calculation:
-    function_recurion()
+            function_recurion()
+
+
+function_recurion()
