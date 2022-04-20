@@ -102,7 +102,7 @@ while not end_game:
     if lives < 0:
         end_game = True
         print("you have no lives left to continue")
-        print("GAME OVER")
+        print("You can't save the person from Hanging !GAME OVER")
 
 
     if "_" not in display:

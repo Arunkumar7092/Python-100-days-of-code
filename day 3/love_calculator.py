@@ -19,6 +19,7 @@
 # "Your score is **z**."
 
 print("Welcome to the Love Calculator!")
+print("These calculator will show your pairing % mark From 1 to 100")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 combined_name = name1 + name2
@@ -47,4 +48,4 @@ if final_result < 10 or final_result > 90:
 elif final_result > 40 and final_result < 50:
     print(f"Your score is {final_result}, you are alright together.")
 else:
-    print(f"Your score is {final_result}.")
+    print(f"Your score is {final_result}, Wow you got awesome Score")
