@@ -140,6 +140,8 @@ while machine_off == False:
                         check_resources(menu[prompt], resources)
                     else:
                         get_report(prompt,resources)
+        if no_resource == True:
+            break
         print("please insert coins.")
 
         one_ruppe = int(input("How many one ruppees?: "))
@@ -159,9 +161,6 @@ while machine_off == False:
         transaction_success_withchange = check_transaction_withchange(money, menu[prompt]["cost"], transaction_success_withchange)
 
         transaction_fail = check_transaction_fail(money, menu[prompt]["cost"], transaction_fail)
-        print(transaction_success_withoutchange)
-        print(transaction_success_withchange)
-        print(transaction_fail)
         if transaction_success_withchange == True:
             print(f"Transaction Successfull With change {balance} to return")
             if prompt == "espresso":
