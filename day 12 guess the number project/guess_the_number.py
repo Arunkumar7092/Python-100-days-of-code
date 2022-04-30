@@ -25,7 +25,7 @@ def play_game():
     print("Welcome to the Number Guessing Game!")
     print("Guess The number between 1 and 100.")
     choosen_number = random.randint(1,100)
-    print(f"Pssst, the correct answer is {choosen_number}")
+    # print(f"Pssst, the correct answer is {choosen_number}")
 
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
     attempt = choose_attempt(difficulty)
