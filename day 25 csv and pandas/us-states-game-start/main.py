@@ -23,10 +23,12 @@ while len(guessed_state) < 50:
     data = pandas.read_csv("50_states.csv")
     state_list = data.state.to_list()
     if answer == "Exit":
-        missing_state = []
-        for each in state_list:
-            if each not in guessed_state:
-                missing_state.append(each)
+        missing_state = [each for each in state_list if each not in guessed_state]
+        missed_state = pandas.DataFrame(missing_state)
+        missed_state.to_csv("missed_state.csv")
+        # for each in state_list:
+        #     if each not in guessed_state:
+        #         missing_state.append(each)
         break
     if answer in state_list:
         guessed_state.append(answer)
@@ -40,5 +42,4 @@ while len(guessed_state) < 50:
         word.write(searched_data.state.item())
 
 
-missed_state = pandas.DataFrame(missing_state)
-missed_state.to_csv("missed_state.csv")
+
