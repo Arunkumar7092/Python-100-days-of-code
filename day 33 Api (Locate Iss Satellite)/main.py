@@ -8,11 +8,15 @@ MY_PASSWORD = "aidni007"
 MY_LAT = 13.082680
 MY_LONG = 80.270721
 
-
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+response.raise_for_status()
+data = response.json()
+print(data)
 def is_iss_overhead():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
     data = response.json()
+    print(data)
 
     iss_latitude = float(data["iss_position"]["latitude"])
     iss_longitude = float(data["iss_position"]["longitude"])

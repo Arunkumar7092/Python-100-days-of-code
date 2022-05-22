@@ -16,6 +16,7 @@ class Quizz:
             return True
         else:
             return False
+
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower():
             print("You got the correct answer")
